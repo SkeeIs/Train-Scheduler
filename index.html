@@ -5,74 +5,85 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- UIKit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" />
+    <!-- UIKit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
   </head>
   <body>
-    <div class="jumbotron text-center">
-        <h1 class="display-3">Train Scheduler</h1>
-        <p class="lead">Something Something Trains</p>
-        </p>
-    </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card w-100">
-                    <div class="card-header">
-                        Train Schedule
-                    </div>
-                    <div class="card-body">
-                       <table class="table">
-                           <thead>
-                               <tr>
-                                   <th scope="col">Train Name</th>
-                                   <th scope="col">Destination</th>
-                                   <th scope="col">Frequency (min)</th>
-                                   <th scope="col">Next Arrival</th>
-                                   <th scope="col">Minutes Away</th>
-                               </tr>
-                           </thead>
-                           <tbody id="schedule-data">
-                           </tbody>
-                       </table>
-                    </div>
-                </div>
+        
+        <div class="first-row">
+            <h1>Train Scheduler</h1>
+            <p>Something Something Choo-Choo</p>
+            <div class="img-container">
+                <img src="assets/images/noun_Train_179467.png" width="150px"/>
+                <img src="assets/images/noun_Train_367261.png" width="150px"/>
+                <img src="assets/images/noun_Train_1195433.png" width="150px"/>
             </div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card w-100">
-                    <div class="card-header">
-                        Add a Train
-                    </div>
-                    <div class="card-body">
-                       
-                        <form>
-                            <div class="form-group">
-                                <label>Train Name</label>
-                                <input type="text" class="form-control" id="name-input">
-                            </div>
-                             <div class="form-group">
-                                <label>Destination</label>
-                                <input type="text" class="form-control" id="dest-input">
-                            </div>
-                             <div class="form-group">
-                                <label>Frequency (min)</label>
-                                <input type="number" class="form-control" id="freq-input">
-                            </div>
-                             <div class="form-group">
-                                <label>Next Arrival</label>
-                                <input type="time" class="form-control" id="next-input">
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="send">Submit</button>
-                        </form>
-
-                    </div>
-                </div>
+        
+        <div class="second-row">
+            <h3>Train Schedule</h3>
+            
+            <div class="tab-div">
+                <table class="table" align="center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule-data">
+                    </tbody>
+                </table>
             </div>
 
         </div>
+    
+        <div class="third-row">
+            <h3>Add a Train</h3>
+
+            <div class="form-div">
+                <form class=".uk-form-stacked">
+                    <div>
+                        <label class=".uk-form-label" for="form-stacked-text">Train Name</label>
+                    </div>
+                    <div class="uk-form-controls">    
+                        <input type="text" class=".uk-input .uk-form-width-large" id="name-input">
+                    </div>
+                    <div>
+                        <label class=".uk-form-label" for="form-stacked-text">Destination</label>
+                    </div>
+                    <div class="uk-form-controls">   
+                        <input type="text" class=".uk-input .uk-form-width-large" id="dest-input">
+                    </div>
+                    <div>
+                        <label class=".uk-form-label" for="form-stacked-text">First Arrival Time (military time HH:mm)</label>
+                    </div>
+                    <div class="uk-form-controls">        
+                        <input type="text" class=".uk-input .uk-form-width-large" id="first-input">
+                    </div>
+                    <div>
+                        <label class=".uk-form-label" for="form-stacked-text">Frequency (min)</label>
+                    </div>
+                    <div class="uk-form-controls">        
+                        <input type="number" class=".uk-input .uk-form-width-large" id="freq-input">
+                    </div>
+                    <div>
+                        <button type="submit" class="uk-button uk-button-default uk-button-small" id="send">Submit</button>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+    
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

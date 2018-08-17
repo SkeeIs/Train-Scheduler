@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: #4A5C6B;
+    grid-gap: 10px;
+}
+
+.first-row {
+    background: #62E3DC;
+    text-align: center;
+    color: #4A5C6B;
+}
+
+.second-row {
+    background: #D6E9F2;
+    text-align: center;
+    color: #4A5C6B;
+}
+
+.tab-div {
+    margin: auto;
+    text-align: center;
+    color: #4A5C6B;
+}
+
+.third-row {
+    background: #8AB5F2;
+    text-align: center;
+    color: #4A5C6B;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    color: #4A5C6B;
+}

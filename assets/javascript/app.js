@@ -41,34 +41,31 @@ database.ref().on("child_added", function(snapshot) {
     var frequency = snapshot.val().frequency;
     var nextArrival = snapshot.val().nextArrival;
 
-    //convert time to be Moment.js compatible
-    var tempTime = moment(nextArrival, "H HH").format("X");
-    var milTime = moment.unix(tempTime).format("H HH");
-    console.log(milTime);
-    // Appending rows with data
-    var thisRow = $('<tr>')
+    console.log(nextArrival);
     
-    var thisCell = $('<td>')
+    var thisRow = $("<tr>")
+    
+    var thisCell = $("<td>")
     thisCell.text(name);
     thisRow.append(thisCell);
 
-    var thisCell = $('<td>')
+    var thisCell = $("<td>")
     thisCell.text(destination);
     thisRow.append(thisCell);
 
-    var thisCell = $('<td>')
+    var thisCell = $("<td>")
     thisCell.text(frequency);
     thisRow.append(thisCell);
 
-    var thisCell = $('<td>')
-    thisCell.text(milTime);
+    var thisCell = $("<td>")
+    thisCell.text(nextArrival);
     thisRow.append(thisCell);
 
     // var thisCell = $('<td>')
     // thisCell.text(minAway);
     // thisRow.append(thisCell);
 
-    $("schedule-data").append(thisRow);
+    $("#schedule-data").append(thisRow);
 })
 
  
